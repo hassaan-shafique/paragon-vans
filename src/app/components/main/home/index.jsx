@@ -25,38 +25,51 @@ const Home = () => {
       <div className="absolute inset-0 z-20 flex flex-col md:flex-row items-center justify-between px-6 md:px-20">
         
         {/* Left Section */}
-        <div className="text-white w-full md:w-1/2 mb-10 md:mb-0">
-          <div className="bg-black/50 p-8 md:p-10 rounded-2xl backdrop-blur-md shadow-xl">
-            <div className="mb-6">
-              <Image
-                src="/bg-paragon.png"
-                alt="Paragon Van Lines"
-                width={220}
-                height={100}
-                className="object-contain"
-              />
-            </div>
+        <div className="text-white w-full md:w-1/2 mb-10 md:mb-0 relative">
+  {/* Blurred Background Image */}
+  <div className="absolute inset-0 z-0">
+    <Image
+      src="/flag.svg"
+      alt="Background Flag"
+      fill
+      className="object-cover opacity-70 blur-sm"
+    />
+  </div>
 
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight">
-              Professional Moving & Storage Services
-            </h1>
+  {/* Foreground Card */}
+  <div className="relative z-10 bg-black/50 p-8 md:p-10 rounded-2xl backdrop-blur-md shadow-sm">
+    <div className="mb-6">
+      <Image
+        src="/bg-paragon.png"
+        alt="Paragon Van Lines"
+        width={220}
+        height={100}
+        className="object-contain"
+      />
+    </div>
 
-            <p className="text-lg md:text-xl text-gray-200 mt-4 font-light">
-              Reliable. Affordable. Nationwide.
-            </p>
+    <h1 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight">
+      Professional Moving & Storage Services
+    </h1>
 
-            <div className="flex gap-4 mt-6">
-            <Link href="#contact" 
-   className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition-all duration-300">
-    Contact
-  
-</Link>
-              <button className="bg-white hover:bg-gray-100 text-red-600 font-semibold px-6 py-3 rounded-full shadow-md transition-all duration-300">
-                Book Us
-              </button>
-            </div>
-          </div>
-        </div>
+    <p className="text-lg md:text-xl text-gray-200 mt-4 font-light">
+      Reliable. Affordable. Nationwide.
+    </p>
+
+    <div className="flex gap-4 mt-6">
+      <Link
+        href="#contact"
+        className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition-all duration-300"
+      >
+        Contact
+      </Link>
+      <button className="bg-white hover:bg-gray-100 text-red-600 font-semibold px-6 py-3 rounded-full shadow-md transition-all duration-300">
+        Book Us
+      </button>
+    </div>
+  </div>
+</div>
+
 
         {/* Right Section - Trust Card */}
         <div className="w-full md:w-1/2 flex justify-center">

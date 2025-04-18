@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { FaFacebook, FaInstagram } from 'react-icons/fa'
+import { Phone } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -104,6 +105,20 @@ const Contact = () => {
           <div className="z-10 text-center">
             <p className="text-sm break-all"> 📧 paragonvanlines770@gmail.com</p>
           </div>
+          <div className="z-10 text-center space-y-2">
+  <p className="flex items-center justify-center gap-2">
+    <Phone className="w-4 h-4 white" />
+    5616094272
+  </p>
+  <p className="flex items-center justify-center gap-2">
+    <Phone className="w-4 h-4 white" />
+    8484595056
+  </p>
+  <p className="flex items-center justify-center gap-2">
+    <Phone className="w-4 h-4 white" />
+    5618099517
+  </p>
+</div>
 
           <div className="z-10 text-center flex gap-7">
            
