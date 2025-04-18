@@ -13,9 +13,9 @@ const services = [
     desc: "Efficient, secure packing and unpacking for your move.",
   },
   {
-    title: "Custom Crating",
+    title: "Commercial And Overseas",
     image: "/services/custom.jpg",
-    desc: "Special crates for fragile or high-value items.",
+    desc: "A seamless, end-to-end relocation solution for businesses and individuals moving's, across international borders..",
   },
   {
     title: "Antique & Fine Art",

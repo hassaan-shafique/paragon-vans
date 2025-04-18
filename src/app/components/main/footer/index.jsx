@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { FaFacebook, FaInstagram } from 'react-icons/fa'
-import { Phone } from 'lucide-react'
+import { Phone} from 'lucide-react'
 
 const Footer = () => {
   return (
@@ -21,6 +21,10 @@ const Footer = () => {
               8484595056
             </p>
             <p className="text-sm break-all">📧 paragonvanlines770@gmail.com</p>
+            <p>
+             
+              4838 Ne 12 Ave Oakland Park Florida 33334 
+            Suit # A.</p>
           </div>
         </div>
 

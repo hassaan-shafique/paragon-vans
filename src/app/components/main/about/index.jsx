@@ -10,8 +10,10 @@ const About = () => {
         <h2 className="text-4xl font-extrabold mb-6 text-red-600">
           About Paragon Van Lines
         </h2>
-        <p className="text-lg md:text-xl mb-12 text-gray-700">
-          Paragon Van Lines specializes in both local and long-distance moves across all 50 states. With a team trained for excellence, we ensure a seamless, stress-free experience for every customer.
+        <p className="text-lg font-bold md:text-xl mb-12 text-gray-700">
+        At Paragon Van Lines, we offer high-quality moving services across the United States and internationally. We have over 25 years of experience and are a locally and veteran-owned business based in Florida. Our owner is a former Navy Seal. Moving doesn't have to be a stressful experience. To make it better for you, we always keep an open line of communication with our clients. Any time that you have a question, don’t hesitate to reach out to us. We will break everything down in a way that is easy to understand
+
+       Paragon Van Lines is a professional Moving company that will be responsible for your move from pick up to delivery. Our trucks are owned and operated by our team. Our moving team is Vetted and our customer service is open 24/7.
         </p>
 
         <div className="grid md:grid-cols-2 gap-12 text-left">
@@ -26,6 +28,7 @@ const About = () => {
               <li>✅ Custom Crating for High-Value Items</li>
               <li>✅ Fragile & Antique Item Handling</li>
               <li>✅ Climate-Controlled Storage Options</li>
+              <li>✅ Comercials and Overseas</li>
             </ul>
           </div>
 

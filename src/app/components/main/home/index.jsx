@@ -40,12 +40,12 @@ const Home = () => {
 
             {/* Foreground Card */}
             <div className="relative z-10 bg-white p-8 md:p-10 rounded-2xl backdrop-blur-md shadow-2xl border border-red-600">
-              <div className="mb-6 -ml-10">
+              <div className="mb-6 -ml-1">
                 <Image
                   src="/bg-paragon.png"
                   alt="Paragon Van Lines"
-                  width={220}
-                  height={100}
+                  width={400}
+                  height={400}
                   className="object-contain"
                 />
               </div>
@@ -58,16 +58,16 @@ const Home = () => {
                 Reliable. Affordable. <span className="text-red-600">Nationwide.</span>
               </p>
 
-              <div className="flex gap-4 mt-6 flex-wrap">
+              <div className=" max-w-8xl flex text-center gap-4 mt-6 flex-wrap">
                 <Link
                   href="#contact"
-                  className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition-all duration-300"
+                  className=" w-3xl bg-red-600 text-center hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition-all duration-300"
                 >
-                  Contact
+                 Get A Quote Now
                 </Link>
-                <button className="bg-white hover:bg-gray-100 text-red-600 font-semibold px-6 py-3 rounded-full shadow-md transition-all duration-300">
+                {/* <button className="bg-white hover:bg-gray-100 text-red-600 font-semibold px-6 py-3 rounded-full shadow-md transition-all duration-300">
                   Book Us
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
