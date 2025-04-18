@@ -8,9 +8,9 @@ const galleryItems = [
   { type: "image", src: "/gallery/gallery4.jpg", alt: "Furniture being moved" },
   { type: "image", src: "/gallery/gallery5.jpg", alt: "Moving truck" },
   { type: "image", src: "/gallery/gallery7.jpg", alt: "Setup at home" },
-  { type: "video", src: "/gallery/gallery6.mp4",  poster:"/poster1.png", alt: "Furniture loading" },
+  { type: "video", src: "/gallery/gallery6.mp4", poster: "/poster1.png", alt: "Furniture loading" },
   { type: "image", src: "/gallery/gallery8.jpg", alt: "Furniture being moved" },
-  { type: "video", src: "/gallery/gallery10.mp4", poster:"/poster2.png", alt: "Truck on site" },
+  { type: "video", src: "/gallery/gallery10.mp4", poster: "/poster2.png", alt: "Truck on site" },
 ];
 
 const Gallery = () => {
@@ -27,7 +27,7 @@ const Gallery = () => {
   return (
     <section id="gallery" className="bg-white py-16 px-4 md:px-10 lg:px-20">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-12">
           Our Work Gallery
         </h2>
 
@@ -36,11 +36,11 @@ const Gallery = () => {
           {galleryItems.map((item, index) => (
             <div
               key={index}
-              className="relative group cursor-pointer rounded-lg overflow-hidden shadow hover:shadow-xl transition duration-300"
+              className="relative group cursor-pointer rounded-lg overflow-hidden shadow-lg hover:shadow-lg hover:shadow-red-500/40 transition duration-300 border border-red-200"
               onClick={() => handlePreview(item)}
             >
               {/* Hover label */}
-              <div className="absolute top-2 left-2 bg-black bg-opacity-60 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
+              <div className="absolute top-2 left-2 bg-red-700 bg-opacity-80 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
                 {item.type === "image" ? "Image" : "Video"}
               </div>
 
@@ -50,11 +50,11 @@ const Gallery = () => {
                   loading="lazy"
                   src={item.src}
                   alt={item.alt}
-                  className="w-full h-60 object-cover"
+                  className="w-full h-60 object-cover brightness-90"
                 />
               ) : (
                 <video
-                  className="w-full h-60 object-cover"
+                  className="w-full h-60 object-cover brightness-90"
                   preload="none"
                   muted
                   playsInline
@@ -69,10 +69,10 @@ const Gallery = () => {
 
         {/* Modal */}
         {modalContent && (
-          <div className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center px-4">
-            <div className="bg-white rounded-lg overflow-hidden relative max-w-3xl w-full">
+          <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center px-4">
+            <div className="bg-zinc-900 rounded-lg overflow-hidden relative max-w-3xl w-full border border-red-600">
               <button
-                className="absolute top-3 right-3 text-white bg-red-500 hover:bg-red-600 p-2 rounded-full z-10"
+                className="absolute top-3 right-3 text-white bg-red-600 hover:bg-red-700 p-2 rounded-full z-10"
                 onClick={closeModal}
               >
                 ✕

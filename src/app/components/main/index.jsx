@@ -5,6 +5,7 @@ import About from './about'
 import Services from './services'
 import Gallery from './gallery'
 import Contact from './contact'
+import Footer from  "./footer"
 
 const Main = () => {
   return (
@@ -15,6 +16,7 @@ const Main = () => {
      <Services/>
      <Gallery/>
      <Contact/>
+     <Footer/>
     </>
   )
 }

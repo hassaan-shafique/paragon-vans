@@ -10,18 +10,18 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-gray-200 shadow-sm">
+    <nav className="sticky top-0 z-50 backdrop-blur-md bg-white border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <div className="flex items-center space-x-3">
           <Image src="/paragon-logo.png" alt="Paragon Logo" width={60} height={60} />
-          <span className="text-xl md:text-2xl font-bold text-gray-800 tracking-wide">
+          <span className="text-xl md:text-2xl font-bold text-red-600 tracking-wide">
             Paragon Van Lines
           </span>
         </div>
 
-        
-        <ul className="hidden md:flex space-x-8 text-gray-700 font-medium text-base">
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-8 text-gray-800 font-medium text-base">
           {["Home", "About Us", "Services", "Gallery", "Contact"].map((item, index) => (
             <li key={index}>
               <Link
@@ -34,17 +34,17 @@ const Navbar = () => {
           ))}
         </ul>
 
-   
+        {/* Hamburger */}
         <div className="md:hidden">
           <button onClick={toggleMenu} aria-label="Toggle Menu">
-            {isOpen ? <X className="w-6 h-6 text-gray-700" /> : <Menu className="w-6 h-6 text-gray-700" />}
+            {isOpen ? <X className="w-6 h-6 text-gray-800" /> : <Menu className="w-6 h-6 text-gray-800" />}
           </button>
         </div>
       </div>
 
-     
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-4 text-gray-700 font-medium">
+        <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-4 text-gray-800 font-medium">
           {["Home", "About Us", "Services", "Gallery", "Contact"].map((item, index) => (
             <Link
               key={index}

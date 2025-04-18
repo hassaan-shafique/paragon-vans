@@ -38,7 +38,7 @@ const Services = () => {
   return (
     <section id="services" className="bg-white py-16 px-4 md:px-10 lg:px-20">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-red-600">
           Our Services
         </h2>
 
@@ -46,7 +46,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300"
+              className="bg-white border border-red-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300"
             >
               <div className="relative h-52 w-full">
                 <Image
@@ -54,13 +54,14 @@ const Services = () => {
                   alt={service.title}
                   layout="fill"
                   objectFit="cover"
+                  className="brightness-90"
                 />
               </div>
               <div className="p-5">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                <h3 className="text-xl font-semibold text-red-600 mb-2">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{service.desc}</p>
+                <p className="text-gray-700 text-sm">{service.desc}</p>
               </div>
             </div>
           ))}
