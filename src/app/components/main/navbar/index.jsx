@@ -20,7 +20,7 @@ const Navbar = () => {
           </span>
         </div>
 
-        {/* Desktop Nav */}
+        
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium text-base">
           {["Home", "About Us", "Services", "Gallery", "Contact"].map((item, index) => (
             <li key={index}>
@@ -34,7 +34,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile Toggle */}
+   
         <div className="md:hidden">
           <button onClick={toggleMenu} aria-label="Toggle Menu">
             {isOpen ? <X className="w-6 h-6 text-gray-700" /> : <Menu className="w-6 h-6 text-gray-700" />}
@@ -42,7 +42,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+     
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-4 text-gray-700 font-medium">
           {["Home", "About Us", "Services", "Gallery", "Contact"].map((item, index) => (

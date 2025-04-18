@@ -9,6 +9,7 @@ const Contact = () => {
     email: '',
     pickup: '',
     dropoff: '',
+    description: '',
   })
 
   const handleChange = (e) => {
@@ -64,6 +65,15 @@ const Contact = () => {
               name="dropoff"
               placeholder="Drop-off Location"
               value={formData.dropoff}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-700 rounded-lg focus:outline-none focus:ring-2  placeholder-gray-500 text-black"
+              required
+            />
+             <input
+              type="text"
+              name="description"
+              placeholder="Any Instruction"
+              value={formData.description}
               onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-700 rounded-lg focus:outline-none focus:ring-2  placeholder-gray-500 text-black"
               required
