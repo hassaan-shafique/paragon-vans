@@ -1,77 +1,43 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+'use client';
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Home = () => {
   return (
-    <section id="home">
-      <div className="relative h-[90vh] w-full">
-        {/* Background Image */}
+    <section id="home" className="relative h-screen w-full">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
         <Image
-          src="truck.png"
-          alt="Paragon Van Lines"
+          src="/main-image.png"
+          alt="Professional Moving Services"
           layout="fill"
           objectFit="cover"
+          quality={100}
+          className="brightness-75"
           priority
-          className="z-0"
         />
+      </div>
 
-        {/* Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-10" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-l from-black/3 to-transparent z-10" />
+      {/* Content */}
+      <div className="relative z-20 flex items-center h-full px-6 md:px-20">
+        <div className="text-white w-full md:w-2/3 lg:w-1/2 space-y-8">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-wide drop-shadow-md">
+            Professional Moving & Storage Services
+          </h1>
 
-        {/* Main Content */}
-        <div className="absolute inset-0 z-20 flex flex-col md:flex-row items-center justify-between px-6 md:px-20">
-          
-          {/* Spacer (Left Side) */}
-          <div className="hidden md:block w-full md:w-1/2"></div>
+          <p className="text-xl md:text-2xl font-light text-gray-200">
+            Reliable. Affordable. <span className="text-red-500 font-semibold">Nationwide.</span>
+          </p>
 
-          {/* Right Section (Card) */}
-          <div className="text-gray-800 w-full md:w-1/2 relative">
-            {/* Background Flag */}
-            <div className="absolute inset-0 z-0">
-              <Image
-                src="/flag.svg"
-                alt="Background Flag"
-                fill
-                className="object-cover opacity-90 blur-sm"
-              />
-            </div>
-
-            {/* Foreground Card */}
-            <div className="relative z-10 bg-white p-8 md:p-10 rounded-2xl backdrop-blur-md shadow-2xl border border-red-600">
-              <div className="mb-6 -ml-1">
-                <Image
-                  src="/bg-paragon.png"
-                  alt="Paragon Van Lines"
-                  width={400}
-                  height={400}
-                  className="object-contain"
-                />
-              </div>
-
-              <h1 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight text-gray-800">
-                Professional Moving & Storage Services
-              </h1>
-
-              <p className="text-lg md:text-xl text-gray-600 mt-4 font-light">
-                Reliable. Affordable. <span className="text-red-600">Nationwide.</span>
-              </p>
-
-              <div className=" max-w-8xl flex text-center gap-4 mt-6 flex-wrap">
-                <Link
-                  href="#contact"
-                  className=" w-3xl bg-red-600 text-center hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition-all duration-300"
-                >
-                 Get A Quote Now
-                </Link>
-                {/* <button className="bg-white hover:bg-gray-100 text-red-600 font-semibold px-6 py-3 rounded-full shadow-md transition-all duration-300">
-                  Book Us
-                </button> */}
-              </div>
-            </div>
-          </div>
-
+          <Link
+            href="#contact"
+            className="inline-block bg-red-600 hover:bg-red-700 text-white text-lg font-semibold px-8 py-4 rounded-full shadow-xl transition duration-300"
+          >
+            Get A Quote Now
+          </Link>
         </div>
       </div>
     </section>
